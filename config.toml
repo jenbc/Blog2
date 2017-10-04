@@ -1,5 +1,5 @@
 baseurl = "https://example.org/"
-title = "Tracks"
+title = "Learn Date Science Together"
 theme = "hugo-tracks-theme"
 languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
@@ -10,11 +10,11 @@ googleAnalytics = ""
 [params]
   # Use custom.css for your custom styling
   style = "default"
-  description = "Describe your website"
+  description = "Blogs about Rstudio and other Data Science tools"
   copyright = "&copy;2016 Your name or company"
   sidebarAbout = [
-    "I am a creative illustrator and graphic designer with more than 10 years of experience.",
-    "Originally from Toronto, currently based in London."
+    "I am a student learning about Data Science.",
+    "Originally from Jamaica, currently based in Erie."
   ]
 
   # Contact page
