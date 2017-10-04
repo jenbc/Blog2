@@ -1,4 +1,4 @@
-baseurl = "https://example.org/"
+baseurl = "https://jenbc.netlify.com/"
 title = "Learn Date Science Together"
 theme = "hugo-tracks-theme"
 languageCode = "en-us"
