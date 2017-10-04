@@ -13,12 +13,12 @@
     
     
     <item>
-      <title>This is a Standard Post</title>
+      <title>ScatterPlot</title>
       <link>/post/work2/</link>
       <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
       
       <guid>/post/work2/</guid>
-      <description>&lt;p&gt;This is what an ordinary post looks like, and you’re reading a custom excerpt right now. Have fun looking around the theme, and don’t forget to check it out on your phone!
+      <description>&lt;p&gt;For today we will be learning how to create Scatter Plots in R. We will be using a baseball database as an example.
 &lt;/p&gt;</description>
     </item>
     

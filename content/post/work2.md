@@ -1,6 +1,6 @@
 +++
 date = "2016-11-05T19:41:01+05:30"
-title = "This is a Standard Post"
+title = "ScatterPlot"
 draft = false
 image = "img/portfolio/logs1.jpg"
 showonlyimage = false
@@ -8,7 +8,11 @@ categories = [ "Design"]
 weight = 1
 +++
 
-This is what an ordinary post looks like, and you’re reading a custom excerpt right now. Have fun looking around the theme, and don’t forget to check it out on your phone!
+For today we will be learning how to create Scatter Plots in R. We will be using a baseball database as an example.
+<!--more-->
+
+The first three packages that we need to install :
+
 <!--more-->
 
 When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.
