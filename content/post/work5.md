@@ -3,30 +3,37 @@ image = "img/portfolio/railroad-forest1.jpg"
 showonlyimage = true
 draft = false
 date = "2016-11-05T19:53:42+05:30"
-title = "A Totally Response Theme"
+title = "Histogram"
 categories = [ "photography" ]
 weight = 5
 +++
 
-Fifth abundantly made Give sixth hath. Cattle creature i be don't them.
+According to Dictionary.com, a histogram is a graph of a frequency distribution in which rectangles with bases on the horizontal axis are given widths equal to the class intervals and heights equal to the corresponding frequencies.
 <!--more-->
+ 
+We will be looking at the weights of MLB players from the Lahman database, specifically the Master Table. We will exclude the rows which do not have a numerical value.
 
-Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
 
-A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+We will use a query to pull the weights of players. 
 
-1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-2. Aliquam tincidunt mauris eu risus.
+```{r}
+query<-"SELECT weight FROM Master"
+result<-sqldf(query)
+```
 
-> The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
+We will now show the data in the form of a histogram. This histogram has 65 bins.
 
-## Header Level 2
-
-Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-
-The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
-
-When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then  
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="pink",fill="black",bins=65)+
+  ggtitle("Baseball Player Bodyweight Distribution")+
+  xlab("Weight of player")+
+  ylab("Number of players")
+```  
+  
+## We removed 854 rows containing non-finite values (stat_bin).

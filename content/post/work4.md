@@ -3,30 +3,43 @@ draft = false
 image = ""
 showonlyimage = false
 date = "2016-11-05T19:50:47+05:30"
-title = "A post without an Image"
+title = "Bar Graph"
 categories = [ "code" ]
 weight = 4
 +++
 
-Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+According to Dictionary.com a bar graph is a diagram in which the values of variables are represented by the height or length of lines or rectangles of equal width.
+
 <!--more-->
 
-Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+Compared to other data visualizations, the main difference in creating a bar graph is using geom_bar, adding stat='identity' for labelling purposes and using coord_flip to make horizontal bars.
 
-A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+We will begin by installing the packages needed to create this bar graph. These are the packages needed. 
 
-1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-2. Aliquam tincidunt mauris eu risus.
+```{r}
+library(devtools)
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+ ```
+Firstly, we will create a query that determines the total number of homeruns per team in 1980.
 
-> The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
+```{r}
+query<-"SELECT name,HR FROM Teams WHERE yearID=1980
+ORDER BY HR"
 
-## Header Level 2
+result<-sqldf(query)
 
-Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+result$name<-factor(result$name,levels=result$name)
+```
+This next section will visualize the data as a bar graph.
 
-The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
-
-When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then  
+```{r}
+ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat='identity')+
+  coord_flip()+
+  xlab("Team name")+
+  ylab("Homeruns")+
+  ggtitle("Total Team Homerun Distribution")
+  ```
+  
