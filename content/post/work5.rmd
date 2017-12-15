@@ -3,7 +3,7 @@ draft = false
 date = "2016-11-05T19:53:42+05:30" 
 title = "Histogram" 
 image = "img/portfolio/railroad-forest1.jpg"
-showonlyimage = false
+showonlyimage = true
 weight = 5
 ---
 

@@ -3,7 +3,7 @@ draft = false
 date = "2016-11-05T19:41:01+05:30" 
 title = "ScatterPlot"  
 image = "img/portfolio/wscatter21-1.png"
-showonlyimage = false
+showonlyimage = true
 weight = 2
 ---
 
