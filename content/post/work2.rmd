@@ -1,22 +1,25 @@
 ---
 date = "2016-11-05T19:41:01+05:30"
 title = "ScatterPlot"
-draft = false
-image = "img/portfolio/logs1.jpg"
+draft = true
+image = "img/portfolio/wscatter21-1.png"
 showonlyimage = false
 categories = [ "Design"]
 weight = 1
+
 ---
+
+
+```{rcss: style.violet.css}
+
+```
 
 For today we will be learning how to create Scatter Plots in R. We will be using a baseball database as an example specifically homeruns and strikeouts from the Lahman database.
 <!--more-->
 
 The first three packages that we need to install :
-Lahman
-Sqldf
-Ggplot2
 
-```{r setup, include=FALSE}
+```{r setup, warning=FALSE, message=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
@@ -24,7 +27,8 @@ library(ggplot2)
 
 For this graph we only want career homeruns and strikeouts from players who had more than 400 homeruns.
 
-```{r}
+
+```{r, highlight=TRUE}
 query<-"SELECT playerID,sum(HR) AS CareerHR,sum(SO) AS CareerSO
 FROM Batting
 GROUP BY playerID

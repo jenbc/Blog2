@@ -119,8 +119,12 @@ $(document).ready(function () {
 </div>
 
 
+<pre class="rcss"><code></code></pre>
 <p>For today we will be learning how to create Scatter Plots in R. We will be using a baseball database as an example specifically homeruns and strikeouts from the Lahman database. <!--more--></p>
-<p>The first three packages that we need to install : Lahman Sqldf Ggplot2</p>
+<p>The first three packages that we need to install :</p>
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)</code></pre>
 <p>For this graph we only want career homeruns and strikeouts from players who had more than 400 homeruns.</p>
 <pre class="r"><code>query&lt;-&quot;SELECT playerID,sum(HR) AS CareerHR,sum(SO) AS CareerSO
 FROM Batting
