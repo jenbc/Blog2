@@ -1,4 +1,4 @@
-+++
+---
 image = "img/portfolio/railroad-forest1.jpg"
 showonlyimage = true
 draft = false
@@ -6,14 +6,19 @@ date = "2016-11-05T19:53:42+05:30"
 title = "Histogram"
 categories = [ "photography" ]
 weight = 5
-+++
+---
 
 According to Dictionary.com, a histogram is a graph of a frequency distribution in which rectangles with bases on the horizontal axis are given widths equal to the class intervals and heights equal to the corresponding frequencies.
 <!--more-->
  
 We will be looking at the weights of MLB players from the Lahman database, specifically the Master Table. We will exclude the rows which do not have a numerical value.
 
-```{r}
+The first three packages that we need to install :
+Lahman
+Sqldf
+Ggplot2
+
+```{r setup, include=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
@@ -36,4 +41,4 @@ ggplot()+
   ylab("Number of players")
 ```  
   
-## We removed 854 rows containing non-finite values (stat_bin).
+# We removed 854 rows containing non-finite values (stat_bin).

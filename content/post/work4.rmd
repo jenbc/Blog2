@@ -1,4 +1,4 @@
-+++
+---
 draft = false
 image = ""
 showonlyimage = false
@@ -6,7 +6,7 @@ date = "2016-11-05T19:50:47+05:30"
 title = "Bar Graph"
 categories = [ "code" ]
 weight = 4
-+++
+---
 
 According to Dictionary.com a bar graph is a diagram in which the values of variables are represented by the height or length of lines or rectangles of equal width.
 
@@ -16,12 +16,19 @@ Compared to other data visualizations, the main difference in creating a bar gra
 
 We will begin by installing the packages needed to create this bar graph. These are the packages needed. 
 
-```{r}
-library(devtools)
+The four packages that we need to install :
+Lahman
+Sqldf
+Ggplot2
+Devtools
+
+```{r setup, include=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
- ```
+library(devtools)
+```
+ 
 Firstly, we will create a query that determines the total number of homeruns per team in 1980.
 
 ```{r}
@@ -32,6 +39,7 @@ result<-sqldf(query)
 
 result$name<-factor(result$name,levels=result$name)
 ```
+
 This next section will visualize the data as a bar graph.
 
 ```{r}

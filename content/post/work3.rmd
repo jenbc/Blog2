@@ -1,4 +1,4 @@
-+++
+---
 image = "img/portfolio/bridge1.jpg"
 showonlyimage = false
 date = "2016-11-05T19:44:32+05:30"
@@ -6,7 +6,7 @@ title = "Time Series"
 categories = [ "Travel" ]
 draft = false
 weight = 2
-+++
+---
 
 A time series has two sets of data with one of the sets of data being time. As a result, they are very useful for showing changes over time.
 
@@ -14,7 +14,12 @@ A time series has two sets of data with one of the sets of data being time. As a
 
 We will use a time series graph to show Babe Ruth's homeruns over his twenty-two seasons.
 
-```{r}
+The first three packages that we need to install :
+Lahman
+Sqldf
+Ggplot2
+
+```{r setup, include=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
