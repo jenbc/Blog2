@@ -6,13 +6,8 @@ image = "img/portfolio/wscatter21-1.png"
 showonlyimage = false
 categories = [ "Design"]
 weight = 1
-
 ---
 
-
-```{rcss: style.violet.css}
-
-```
 
 For today we will be learning how to create Scatter Plots in R. We will be using a baseball database as an example specifically homeruns and strikeouts from the Lahman database.
 <!--more-->
