@@ -1,7 +1,7 @@
 ---
 date = "2016-11-05T19:41:01+05:30"
 title = "ScatterPlot"
-draft = true
+draft = false
 image = "img/portfolio/wscatter21-1.png"
 showonlyimage = false
 categories = [ "Design"]
