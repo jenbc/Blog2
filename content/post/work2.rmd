@@ -1,5 +1,10 @@
 ---
-- date = "2016-11-05T19:41:01+05:30" title = "ScatterPlot" draft = false image = "img/portfolio/wscatter21-1.png"
+draft = false
+date = "2016-11-05T19:41:01+05:30" 
+title = "ScatterPlot"  
+image = "img/portfolio/wscatter21-1.png"
+showonlyimage = false
+weight = 2
 ---
 
 For today we will be learning how to create Scatter Plots in R. We will be using a baseball database as an example specifically homeruns and strikeouts from the Lahman database.

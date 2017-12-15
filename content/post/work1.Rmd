@@ -1,10 +1,10 @@
 ---
-showonlyimage = true
 draft = false
-image = "img/portfolio/a4-paper.jpg"
 date = "2016-11-05T18:25:22+05:30"
 title = "Data Science: What & Why?"
-weight = 0
+image = "img/portfolio/a4-paper.jpg"
+showonlyimage = false
+weight = 1
 ---
 
 My understanding of Data Science is that it is the organizing and analysis of data (big data) into actionable information.

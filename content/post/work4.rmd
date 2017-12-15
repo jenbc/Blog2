@@ -1,5 +1,10 @@
 ---
-- draft = false image = "" showonlyimage = false date = "2016-11-05T19:50:47+05:30"
+draft = false 
+date = "2016-11-05T19:50:47+05:30"
+title = "Bar Graph"
+image = "" 
+showonlyimage = false 
+weight = 4
 ---
 
 According to Dictionary.com a bar graph is a diagram in which the values of variables are represented by the height or length of lines or rectangles of equal width.
