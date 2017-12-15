@@ -14,11 +14,9 @@ According to Dictionary.com, a histogram is a graph of a frequency distribution 
 We will be looking at the weights of MLB players from the Lahman database, specifically the Master Table. We will exclude the rows which do not have a numerical value.
 
 The first three packages that we need to install :
-Lahman
-Sqldf
-Ggplot2
 
-```{r setup, include=FALSE}
+
+```{r setup, warning=FALSE, message=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)

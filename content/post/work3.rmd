@@ -15,11 +15,8 @@ A time series has two sets of data with one of the sets of data being time. As a
 We will use a time series graph to show Babe Ruth's homeruns over his twenty-two seasons.
 
 The first three packages that we need to install :
-Lahman
-Sqldf
-Ggplot2
 
-```{r setup, include=FALSE}
+```{r setup, warning=FALSE, message=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)

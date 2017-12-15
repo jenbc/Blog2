@@ -16,13 +16,9 @@ Compared to other data visualizations, the main difference in creating a bar gra
 
 We will begin by installing the packages needed to create this bar graph. These are the packages needed. 
 
-The four packages that we need to install :
-Lahman
-Sqldf
-Ggplot2
-Devtools
+The four packages that we need to install are :
 
-```{r setup, include=FALSE}
+```{r setup, warning=FALSE, message=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
